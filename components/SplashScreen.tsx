@@ -3,6 +3,7 @@ import { Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins'
 import { useState, useEffect } from 'react';
 import { SplashScreen } from 'expo-router';
 import { useFonts } from 'expo-font';
+import { Svg, Rect } from 'react-native-svg';
 
 export const Splash = () => {
   const [splashAnimationFinished, setSplashAnimationFinished] = useState(false);
@@ -25,13 +26,13 @@ export const Splash = () => {
   return (
     <View className="flex-1 items-center justify-center overflow-hidden bg-emerald-600 p-4">
       <View className="flex flex-row justify-center gap-x-4">
-        <svg
+        <Svg
           width="50"
           height="50"
           viewBox="0 0 50 50"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <rect
+        >
+          <Rect
             x="7.9196"
             y="24.748"
             width="23.8"
@@ -40,7 +41,7 @@ export const Splash = () => {
             stroke="#FEFEFE"
             strokeWidth="11.2"
           />
-        </svg>
+        </Svg>
 
         <Text className="text-4xl font-semibold  text-white">Naukari</Text>
       </View>
